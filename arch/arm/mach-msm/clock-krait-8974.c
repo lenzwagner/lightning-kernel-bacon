@@ -474,7 +474,6 @@ static void get_krait_bin_format_b(struct platform_device *pdev,
 		*speed = 0;
 	}
 
-<<<<<<< HEAD
 	/* Check SVS PVS bin */
 	res = platform_get_resource_byname(pdev, IORESOURCE_MEM, "efuse_svs");
 	if (res) {
@@ -643,9 +642,9 @@ static int clock_krait_8974_driver_probe(struct platform_device *pdev)
 	struct device *dev = &pdev->dev;
 	struct clk *c;
 	int speed, pvs, svs_pvs, pvs_ver, config_ver, rows, cpu, svs_row = 0;
-	unsigned long *freq, *svs_freq, cur_rate, aux_rate;
-	int *uv, *ua, *svs_uv, *svs_ua;
-	u32 *dscr, vco_mask, config_val, svs_fmax;
+	unsigned long *freq = 0, *svs_freq, cur_rate, aux_rate;
+	int *uv = 0, *ua = 0, *svs_uv, *svs_ua;
+	u32 *dscr = 0, vco_mask, config_val, svs_fmax;
 	int ret;
 
 	vdd_l2.regulator[0] = devm_regulator_get(dev, "l2-dig");
