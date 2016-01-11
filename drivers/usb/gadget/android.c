@@ -2364,6 +2364,7 @@ static struct android_usb_function midi_function = {
 	.cleanup	= midi_function_cleanup,
 	.bind_config	= midi_function_bind_config,
 	.attributes	= midi_function_attributes,
+};
 
 static int hid_function_init(struct android_usb_function *f, struct usb_composite_dev *cdev)
 {
