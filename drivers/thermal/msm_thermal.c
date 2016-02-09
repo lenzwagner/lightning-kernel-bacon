@@ -27,7 +27,7 @@
 #include <linux/hrtimer.h>
 
 /* Temp Threshold is the LOWEST level to start throttling. */
-#define _temp_threshold		70
+#define _temp_threshold		50
 /* This is the modifier for each of the progressive throttle levels to kick in*/
 #define _temp_step			4
 /* Default the poll interval to 1 second. Time in usecs */
@@ -38,10 +38,10 @@ int TEMP_STEP = _temp_step;
 int LEVEL_VERY_HOT = _temp_threshold + _temp_step;
 int LEVEL_HOT = _temp_threshold + (_temp_step * 2);
 int LEVEL_HELL = _temp_threshold + (_temp_step * 3);
-int FREQ_HELL = 960000;
-int FREQ_VERY_HOT = 1267200;
-int FREQ_HOT = 1728000;
-int FREQ_WARM = 2265600;
+int FREQ_HELL = 729600;
+int FREQ_VERY_HOT = 1036800;
+int FREQ_HOT = 1497600;
+int FREQ_WARM = 1728000;
 int POLL_INTERVAL = _poll_interval;
 
 // allow full frequency mitigation
